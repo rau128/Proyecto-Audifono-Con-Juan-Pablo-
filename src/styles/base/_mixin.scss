@@ -1,0 +1,15 @@
+@mixin bgColor($color) {
+  background-color: $color;
+}
+
+@mixin mqn($zise) {
+  @media (min-width: $zise) {
+    @content; //esta linea es para que el mixin coja contenido
+  }
+}
+
+@mixin telefono {
+  @media (min-width: 768px) {
+    @content;
+  }
+}

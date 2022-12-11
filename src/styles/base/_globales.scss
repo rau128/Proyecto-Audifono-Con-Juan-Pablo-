@@ -1,0 +1,81 @@
+@use "variables" as v;
+/* fuentes */
+@font-face {
+  font-family: "Lato";
+  src: url(../public/fonts/Lato/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../public/fonts/Roboto/Roboto-Regular.ttf);
+}
+
+/* globales */
+
+.degragado-verde {
+  background: linear-gradient(
+    to right,
+    v.$colorPrimario 0%,
+    v.$colorSecundario 65%
+  );
+
+  color: transparent !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: v.$fuentePrincipal;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: v.$fuenteSecundaria;
+  margin: 25px 0;
+}
+
+h1 {
+  font-size: 4.4rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+.contenedor {
+  max-width: 120rem;
+  width: 90%;
+
+  margin: 0 auto;
+}
+
+/* utilidades */
+.tc {
+  text-align: center;
+}

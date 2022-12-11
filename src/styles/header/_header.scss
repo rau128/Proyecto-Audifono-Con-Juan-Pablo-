@@ -1,0 +1,76 @@
+@use "../base/variables" as v;
+@use "../base/mixin" as m;
+
+.header {
+  text-align: center;
+  @include m.bgColor(v.$negro);
+  color: v.$blanco;
+  padding: 5rem;
+}
+
+@include m.mqn(768px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+  }
+
+  .header h1 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .header img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    padding: 5rem;
+  }
+}
+
+.imagen-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenido-header {
+  flex-basis: 35%;
+}
+
+@media (min-width: 768px) {
+  .contenido-header {
+    text-align: left;
+  }
+}
+
+.parrafo-precio {
+  padding-top: 1rem;
+}
+
+.parrafo-precio span {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+.imagen-header img {
+  width: 280px;
+  height: 280px;
+}
+
+@media (min-width: 768px) {
+  .imagen-header img {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .imagen-header img {
+    width: 270px;
+    height: 270px;
+  }
+}

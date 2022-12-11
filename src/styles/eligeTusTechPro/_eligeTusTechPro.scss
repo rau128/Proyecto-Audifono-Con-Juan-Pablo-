@@ -1,0 +1,44 @@
+@use "../base/variables" as v;
+
+.elige-tus-tech-pro {
+  .modelos {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    height: 18rem;
+
+    .modelo-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      span {
+        font-size: 3.5rem;
+        font-weight: 900;
+      }
+    }
+  }
+
+  .x,
+  .y {
+    background-color: v.$grisClaro;
+    padding: 1rem;
+    color: v.$colorPrimario;
+  }
+
+  .z {
+    background-color: v.$colorPrimario;
+    color: v.$blanco;
+
+    .modelo-info {
+      span {
+        font-size: 4.5rem;
+      }
+    }
+  }
+}
+
+.contenedor-audifonos {
+  display: flex;
+  flex-direction: column-reverse;
+}

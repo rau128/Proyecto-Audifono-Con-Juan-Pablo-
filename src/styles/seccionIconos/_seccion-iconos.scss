@@ -1,0 +1,11 @@
+@use "../base/mixin" as m;
+
+.seccion-iconos {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  @include m.mqn(768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

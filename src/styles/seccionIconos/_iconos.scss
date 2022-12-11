@@ -1,0 +1,26 @@
+@use "../base/variables" as v;
+@use "../base/mixin" as m;
+
+.iconos {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    color: v.$colorPrimario;
+
+    @include m.mqn(768px) {
+      font-size: 2rem;
+    }
+
+    @include m.mqn(1024px) {
+      font-size: 3.6rem;
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+}

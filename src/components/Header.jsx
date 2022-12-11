@@ -11,14 +11,14 @@ const Header = () => {
       </div>
 
       <div className="contenido-header">
-        <p>Sonido Profesional</p>
+        <p className="sonido">Sonido Profesional</p>
         <h1 className="degragado-verde">Tech Pro</h1>
         <p className="parrafo-descripcion">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
           debitis saepe dicta nesciunt ut at, libero assumenda id optio ipsa
           quam, nostrum minus sapiente fugit vitae eius sint ipsum impedit.
         </p>
-        <p className="parrafo-precio">
+        <p className="parrafo-precio color">
           Desde <span>$299</span>{" "}
         </p>
       </div>
