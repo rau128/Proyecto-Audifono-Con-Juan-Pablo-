@@ -1,11 +1,24 @@
 @use "../base/variables" as v;
+@use "../base/mixin" as m;
 
 .elige-tus-tech-pro {
+  @include m.mqn(768px) {
+    h2 {
+      font-size: 5rem;
+    }
+  }
   .modelos {
     display: flex;
     justify-content: space-evenly;
     margin-top: 2rem;
     height: 18rem;
+    transition: all 500ms;
+
+    &:hover {
+      transform: scale(0.8) rotate(20deg);
+      background-color: v.$colorSecundario;
+      color: v.$blanco;
+    }
 
     .modelo-info {
       display: flex;
@@ -24,12 +37,21 @@
     background-color: v.$grisClaro;
     padding: 1rem;
     color: v.$colorPrimario;
+    border-radius: 1rem;
   }
 
   .z {
     background-color: v.$colorPrimario;
     color: v.$blanco;
+    border-radius: 1rem;
 
+    @include m.mqn(1024px) {
+      img {
+        width: 300px;
+        height: 300px;
+        margin-top: 7rem;
+      }
+    }
     .modelo-info {
       span {
         font-size: 4.5rem;
@@ -41,4 +63,27 @@
 .contenedor-audifonos {
   display: flex;
   flex-direction: column-reverse;
+
+  @include m.mqn(1024px) {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .x {
+    grid-column: 1/3;
+  }
+
+  .y {
+    grid-row: 2/3;
+    grid-column: 1/3;
+  }
+
+  .z {
+    grid-column: 3/6;
+    grid-row: 1/3;
+    height: auto;
+  }
 }
